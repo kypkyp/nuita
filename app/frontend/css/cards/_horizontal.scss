@@ -1,0 +1,8 @@
+a.card {
+  background-color: $body-background-color;
+  color: $body-font-color;
+
+  &:hover {
+    text-decoration: none;
+  }
+}

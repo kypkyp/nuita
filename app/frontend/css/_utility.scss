@@ -28,3 +28,13 @@
   left: 50%;
   transform: translate(-50%, -50%) translateY(-#{$header-height / 2});
 }
+
+a.card-link-mono {
+  background-color: $body-background-color;
+
+  &:hover {
+    background-color: darken($body-background-color, $hover-background-darkener);
+  }
+
+  transition: 0.15s;
+}
