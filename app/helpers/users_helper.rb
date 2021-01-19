@@ -6,7 +6,7 @@ module UsersHelper
 
   # urlだけ返す 設定なしならデフォルト
   def icon_url(user = current_user, size = 60)
-    if !user || user.icon.url.blank?
+    if !user || user.icon.url.blank? || Rails.env.development?
       asset_path('icon_default')
     else
       if size <= 60

@@ -8,7 +8,7 @@ li.nweet id="nweet#{nweet.url_digest}"
         = link_to "@#{nweet.user.screen_name}", nweet.user, {class: 'nweet-screen-name'}
       .content
         .nweet-sentence
-          span.time = time_ago_in_japanese(nweet.did_at)
+          span.time = time_ago(nweet.did_at)
           | に射精しました。
   .nweet-main
     - if nweet.links.any?
