@@ -1,9 +1,9 @@
-.like-btn
+.like-btn-wrapper
   - if current_user.liked?(nweet)
-    = link_to like_path(nweet: nweet), class: 'btn liked', method: :delete, remote: true do
-      = icon 'fas', 'heart'
+    = link_to like_path(nweet: nweet), class: 'btn btn-like liked', method: :delete, remote: true do
+      = bi 'heart-fill'
       = render 'nweets/like_flash', nweet: nweet
   - else
-    = link_to like_path(nweet: nweet), class: 'btn', method: :post, remote: :true do
-      = icon 'far', 'heart'
+    = link_to like_path(nweet: nweet), class: 'btn btn-like ', method: :post, remote: :true do
+      = bi 'heart'
       = render 'nweets/like_flash', nweet: nweet

@@ -15,15 +15,15 @@ li.nweet id="nweet#{nweet.url_digest}"
       = render 'cards/horizontal', link: nweet.links.first
     - if nweet.statement?
       .nweet-statement = text_url_to_link(nweet.statement).html_safe
-    .nweet-bottom
-      .float-left
-        - if user_signed_in?
-          = render 'nweets/like_form', nweet: nweet
-      .text-right
-        - if delete_possible?(nweet.did_at, nweet.user)
-          = link_to nweet, method: :delete, class: "nweet-delete btn", data: { confirm: "本当に削除しますか？この機能は誤操作時にのみ使用してください。" } do
-            = icon 'fas', 'trash'
-        - unless @detail
-          = link_to nweet, class: "nweet-delete btn pr-0" do
-            = icon 'fas', 'external-link-alt'
+  .nweet-bottom
+    .nweet-bottom-left
+      - if user_signed_in?
+        = render 'nweets/like_form', nweet: nweet
+    .nweet-bottom-right
+      - if delete_possible?(nweet.did_at, nweet.user)
+        = link_to nweet, method: :delete, class: "btn btn-ui-secondary", data: { confirm: "本当に削除しますか？この機能は誤操作時にのみ使用してください。" } do
+          = bi 'trash'
+      - unless @detail
+        = link_to nweet, class: "btn btn-external btn-ui-secondary" do
+          = bi 'box-arrow-up-right'
           

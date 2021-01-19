@@ -1,7 +1,7 @@
-span.px-1#likeFlash
+span.px-1.small#likeFlash
 
 span.small
   - if nweet.latest_liked_time
     span.text-muted 最新のいいね:
-    span.text-muted.pl-1#latestLikedTime
+    span.text-muted#latestLikedTime
       = time_ago(nweet.latest_liked_time)

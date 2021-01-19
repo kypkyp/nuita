@@ -38,3 +38,11 @@ a.card-link-mono {
 
   transition: 0.15s;
 }
+
+.btn-ui-secondary {
+  color: $secondary-font-color;
+
+  &:hover, &:active {
+    color: darken($secondary-font-color, $hover-background-darkener);
+  }
+}

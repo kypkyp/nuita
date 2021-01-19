@@ -58,3 +58,31 @@ a.nweet-screen-name {
   box-sizing: border-box;
   border-left: 1px solid $brand-color;
 }
+
+.nweet-bottom {
+  display: flex;
+}
+
+.nweet-bottom-left {
+  flex-grow: 1;
+  margin-top: 0.25rem;
+}
+
+.liked-color {
+  color: $like-btn-color;
+}
+
+.btn-like {
+  padding-left: 0;
+  padding-right: 0;
+  
+  color: $secondary-font-color;
+
+  &:hover, &:active, &.liked {
+    @extend .liked-color;
+  }
+}
+
+.btn-external {
+  padding-right: 0;
+}
