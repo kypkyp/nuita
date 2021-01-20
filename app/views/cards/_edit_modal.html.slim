@@ -7,9 +7,9 @@
       .modal-body
         = form_with url: tag_path(link: link), remote: true do |f|  
           .input-group.mb-4
-            .input-group-text #
+            .input-group-text = icon('fas', 'hashtag')
             = f.text_field :name, {placeholder: 'タグ名', class: 'form-control', id: "modalNewTagTextField#{link.id}"}
-            .input-group-text.edit-modal-submit-btn-wrapper = f.button '+', type: :submit, class: 'btn btn-primary'
+            .input-group-text.edit-modal-submit-btn-wrapper = f.button icon('fas', 'plus'), type: :submit, class: 'btn btn-primary'
         h6.mb-2 既存のタグ
         .edit-modal-tag-list id="editModalTagList#{link.id}"
           = render 'cards/edit_modal_tags', link: link

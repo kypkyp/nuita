@@ -1,7 +1,7 @@
 .tags.mt-0.mb-2
   - link.tags.pluck(:name).each do |tag_name|
     span.badge.badge-tag.active
-      | #
+      = icon('fas', 'hashtag')
       span.badge-tag-name = tag_name
   - if user_signed_in?
     button class="badge badge-tag tags-edit-btn" data-toggle="modal" data-target="#cardEditModal#{link.id}"
