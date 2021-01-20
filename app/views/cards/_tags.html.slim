@@ -1,11 +1,11 @@
 .tags.mt-0.mb-2
   - link.tags.pluck(:name).each do |tag_name|
-    span.badge.badge-light.badge-tag.mx-1.active
-      span.small = icon 'fas', 'hashtag'
-      span.pr-1 = tag_name
+    span.badge.badge-tag.active
+      | #
+      span.badge-tag-name = tag_name
   - if user_signed_in?
-    button class="badge badge-tag tags-edit-btn mx-1" data-toggle="modal" data-target="#cardEditModal#{link.id}"
-      span.small = icon 'fas', 'pencil-alt'
+    button class="badge badge-tag tags-edit-btn" data-toggle="modal" data-target="#cardEditModal#{link.id}"
+      = bi 'pencil'
       
 - if user_signed_in?
   = render 'cards/edit_modal', link: link

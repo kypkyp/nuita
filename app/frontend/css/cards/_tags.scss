@@ -1,7 +1,21 @@
 .badge-tag {
   background-color: $brand-color;
+  margin-right: 0.25rem;
 }
 
 .tags-edit-btn {
-  border: 0;
+  box-sizing: border-box;
+  border: 1px solid $brand-color;
+  padding: calc(0.35em - 1px) calc(0.65em - 1px);
+
+  background-color: $body-background-color;
+  color: $brand-color;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+.badge-tag-name {
+  padding-left: 0.125rem;
 }
