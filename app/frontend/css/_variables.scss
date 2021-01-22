@@ -9,8 +9,13 @@ $section-border-color: #DFE4E6;
 $column-background-color: #fff;
 $brand-color: #36ca6c;
 
+$bootstrap-primary-color: $brand-color;
+$bootstrap-secondary-color: #6c757d;
+
+/* Bootstrapで使う色 */
 $theme-colors: (
-  primary: $brand-color
+  primary: $bootstrap-primary-color,
+  secondary: $bootstrap-secondary-color
 );
 
 /* modifiers */
