@@ -11,6 +11,10 @@
 
 .wrapper {
   margin-top: $header-height;
+
+  @include media-breakpoint-up(md) {
+    margin-top: calc(#{$header-height} + 1rem);
+  }
 }
 
 .guest-wrapper {
