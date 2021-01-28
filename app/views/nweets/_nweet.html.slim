@@ -8,8 +8,7 @@ li.nweet id="nweet#{nweet.url_digest}"
         = link_to "@#{nweet.user.screen_name}", nweet.user, {class: 'nweet-screen-name'}
       .content
         .nweet-sentence
-          span.time = time_ago(nweet.did_at)
-          | に射精しました。
+          = t('.nweet_sentence', time: time_ago(nweet.did_at))
   .nweet-main
     - if nweet.links.any?
       = render 'cards/horizontal', link: nweet.links.first

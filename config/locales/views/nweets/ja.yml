@@ -3,4 +3,7 @@ ja:
     home_form:
     new_form:
       statement:
-        placeholder: '感想・使用したオカズを入力（100文字以内）'
+        placeholder: 感想・使用したオカズを入力（100文字以内）
+    nweet:
+      delete_confirmation: 本当に削除しますか？この機能は誤操作時にのみ使用してください。
+      nweet_sentence: "%{time}に射精しました。"
