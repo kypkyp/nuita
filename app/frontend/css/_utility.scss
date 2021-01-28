@@ -46,3 +46,13 @@ a.card-link-mono {
     color: darken($secondary-font-color, $hover-background-darkener);
   }
 }
+
+.pr-1 {
+  padding-right: 0.25rem;
+}
+
+.btn-ui {
+  &:focus {
+    border: transparent;
+  }
+}
